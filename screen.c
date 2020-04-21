@@ -36,7 +36,7 @@ void gotoXY(int row, int col){
 void draw_bar(int col, int height){
 	int i;
 	for(i=1; i<=height; i++){
-		gotoXY(i, col);
+		gotoXY(40-i, col);		//draw from bottom of screen
 #ifdef UNICODE
 		printf("%s", BAR);
 #else
