@@ -4,7 +4,7 @@
 $peaks = $_POST['peaks'];
 $db_val = $_POST['db_val'];
 $today = date("Y-m-d H:i:s");
-$record = $today . ", " . $ID . ", " . $name . "\n";
+$record = $today . ", " . $peaks . ", " . $db_val . "\n";
 
 $file = "project.log";	//specify log file name
 if(file_exists($file))
