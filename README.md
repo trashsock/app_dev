@@ -13,7 +13,7 @@ List of contents
 3. Operating instructions
 4. File manifect
 5. Copyright and licensing information
-6. COntact information
+6. Contact information
 7. Credits and acknowledgements
 
 1. Configuration instructions
@@ -45,6 +45,15 @@ List of contents
 	comm.h			contains functions declarations of comm.c
 	makefile		contains an automation tool to generate target files and
 						to clean them
+	sound.php		contains data about number of peaks and maximum decible
+						value, along with a timestamp
 
 5. Copyright and licensing information
 	This application follows GPLv2 copyright.
+
+6. Contact information
+	Name- RITIKA GIRIDHAR
+	Email- ritikagiridhar01@gmail.com
+
+7. Credits and acknowledgement
+	This project would not be possible without our mentor Dr. Chao Gao 
