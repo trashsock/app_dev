@@ -18,7 +18,7 @@ typedef struct
 	short bitsPerSample;
 	char subchunk2ID[4];
 	int subchunk2Size;
-}WAVheader;
+}WAVheader;		//structure contains information about .wav sound file
 
 WAVheader readwavhdr(FILE *);
 void displayWAVhdr(WAVheader h);

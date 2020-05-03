@@ -6,7 +6,7 @@
 
 int main()
 {
-	Position p = get_screen_size();
+	Position p = get_screen_size();		//displays screen size
 	if(p.col < BARS)
 		printf("Screen size isn't wide enough to display %d bars", BARS);
 	clrscr();

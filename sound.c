@@ -12,40 +12,32 @@ WAVheader readwavhdr(FILE *fp)
 
 void displayWAVhdr(WAVheader h)
 {
-	//printf("Chunk ID: ");
 	gotoXY(1, 1);
-/*	for(int i = 0; i < 4; i++)
-		printf("%c", h.chunkID[i]);
-	printf("\n"); */
-	//printf("Chunk size: %d\n", h.chunkSize);
-	//printf("Number of channels: %d\n", h.numChannels);
-	set_fg_colour(CYAN);
-	printf("Sample rate: %d\n", h.sampleRate);
-	//printf("Block align: %d\n", h.blockAlign);
-	//printf("Bits per sample: %d\n", h.bitsPerSample);
 	double duration;
-	duration = (double) h.subchunk2Size/h.byteRate;
-	gotoXY(1, 70);
-	set_fg_colour(MAGENTA);
-	printf("Duration: %.3f seconds\n", duration);
+	duration = (double) h.subchunk2Size/h.byteRate;		//calculates duration of .wav file
+	printf("Duration: %.3f seconds\n", duration);		//max 3 decimal places
 }
 
 void WAVdata(WAVheader h, FILE *fp)
 {
 	short samples[SIZE];
 	int i, k;
-	int count = 0, flag = 0;
+	int peaks = 0, flag = 0;
+	double db_val = 0.0;
 
 	for(i = 0; i < BARS; ++i)
 	{
-		fread(samples, sizeof(samples), 1, fp);
+		fread(samples, sizeof(samples), 1, fp);		//reads sample from file
 		double sum = 0.0;
 		for(k = 0; k < SIZE; k++)
 		{
 			sum = sum + samples[k]*samples[k];
 		}
-		//double dB = sqrt(sum/2000);
-		double dB = 20*log10(sqrt(sum/SIZE));
+		
+		double dB = 20*log10(sqrt(sum/SIZE));		//calculates decibel value
+		
+		if(dB > db_val)
+			db_val = dB;
 
 
 #ifdef SDEBUG
@@ -53,10 +45,10 @@ void WAVdata(WAVheader h, FILE *fp)
 #else
 		if(dB > 70.00)
         {
-            set_fg_colour(RED);
+            set_fg_colour(RED);		//sets bar colour as red for decibel value over 70 dB
 			if(flag == 0)
 			{
-				++count;
+				++peaks;
 				flag = 0;
 			}
         }
@@ -66,12 +58,13 @@ void WAVdata(WAVheader h, FILE *fp)
 			if(flag == 1)
 				flag = 0;
 		}
-		draw_bar(i+1, (int)dB/3);
+		draw_bar(i+1, (int)dB/3);		//draws bars
 #endif
 	}
 	reset_colours();
-	gotoXY(1, 140);
-	set_fg_colour(YELLOW);
-	printf("Number of peaks: %d\n", count);
+	gotoXY(1, 70);
+	printf("Number of peaks: %d\n", peaks);
+	gotoXY(1, 125);
+	printf("Maximum decibel value: %.3f\n", db_val); 	//max 3 decimal places
 	reset_colours();
 }

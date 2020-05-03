@@ -1,8 +1,6 @@
 // The file contains functions to manipulate screens, such as set foreground
 // color, background color, clearscreen, restore default settings, etc.
 // To enable screen manipulations, we need to use VT100 escape sequences
-// see the link: http://www.termsys.demon.co.uk/vtansi.htm
-// use SHIFT_insert key to paste
 
 #include <stdio.h>	// for printf() function
 #include "screen.h"	// contains constants used in this file

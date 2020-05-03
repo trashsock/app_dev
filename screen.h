@@ -1,4 +1,3 @@
-
 #define ESC 0X1B
 #define UNICODE		//for conditional compilation
 #define BAR "\u2590"
