@@ -4,10 +4,12 @@
 ------------------------------------------------------------------------
 
 This project is made for the course "Application Development 2020" for us to
-understans what tools and measures will be used in a software application
+understand what tools and measures will be used in a software application
 development.
 
-List of contents
+------------------------------------------------------------------------
+
+List of contents:
 1. Configuration instructions
 2. Installation instructions
 3. Operating instructions
@@ -16,44 +18,58 @@ List of contents
 6. Contact information
 7. Credits and acknowledgements
 
+-------------------------------------------------------------------------
+
 1. Configuration instructions
-	In this section, we should give users information on how to configure
-	the operating system, software environment, libraries, etc. to run
-	this application.
+	This application is run in a linux environment and uses standard
+	C language libraries as well as user defined libraries.
+
+-------------------------------------------------------------------------
 
 2. Installation instructions
-	In this section, we should give users information on how to install this
-	application, what files not included in this package should be used to 
-	install this app.
+	All the files required to run this application are already present
+	but if you want to change the sound file then you would have to 
+	download your own .wav file and then name it "test.wav".
+
+-------------------------------------------------------------------------
 
 3. Operating instructions
-	In this section, we should give users information on how to run this 
-	application eg. what command-line arguments can be given and what they
-	can do.
+	 In order to run this application, first type "make" and after it is
+     done compiling, type "./sound" to run executable.
+
+--------------------------------------------------------------------------
 
 4. File manifet
-	We should list all files of this application here with short descriptions.
 
 	List of files:
 	README.md		this file
 	screen.c		contains screen manipulation functions
 	screen.h		contains constant definitions and function declarations
 						of screen.c
-	testscreen.c	contains data to test screen.c functions
-	testcurl.c		contains data to test comm.c functions
+	main.c			contains data to run the application
 	comm.c			contains data transfer functions
 	comm.h			contains functions declarations of comm.c
 	makefile		contains an automation tool to generate target files and
 						to clean them
 	sound.php		contains data about number of peaks and maximum decible
 						value, along with a timestamp
+	sound.c			contains sound manipulation functions
+	sound.h			contains function declarations of sound.c
+
+--------------------------------------------------------------------------
 
 5. Copyright and licensing information
 	This application follows GPLv2 copyright.
 
+--------------------------------------------------------------------------
+
 6. Contact information
-	Name- RITIKA GIRIDHAR
+	Name- Ritika Giridhar
 	Email- ritikagiridhar01@gmail.com
 
-7. Credits and acknowledgement
-	This project would not be possible without our mentor Dr. Chao Gao 
+--------------------------------------------------------------------------
+
+7. Credits and acknowledgements
+	This project would not be possible without our mentor Dr. Chao Gao. 
+
+--------------------------------------------------------------------------
