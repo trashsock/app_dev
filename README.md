@@ -19,29 +19,31 @@ List of contents:
 7. Credits and acknowledgements
 
 -------------------------------------------------------------------------
-
+```
 1. Configuration instructions
-	This application is run in a linux environment and uses standard
+	-This application is run in a linux environment and uses standard
 	C language libraries as well as user defined libraries.
-
+```
 -------------------------------------------------------------------------
-
+```
 2. Installation instructions
 	All the files required to run this application are already present
 	but if you want to change the sound file then you would have to 
 	download your own .wav file and then name it "test.wav".
-
+```
 -------------------------------------------------------------------------
 
+```
 3. Operating instructions
 	In order to run this application, first type "make" to generate 
 	executable  and after it is done compiling, type "./sound" to 
 	run executable.
-
+```
 --------------------------------------------------------------------------
-
+```
 4. File manifet
 
+	```
 	List of files:
 	README.md		this file
 	screen.c		contains screen manipulation functions
@@ -56,21 +58,22 @@ List of contents:
 						value, along with a timestamp
 	sound.c			contains sound manipulation functions
 	sound.h			contains function declarations of sound.c
-
+	```
+```
 --------------------------------------------------------------------------
-
+```
 5. Copyright and licensing information
 	This application follows GPLv2 copyright.
-
+```
 --------------------------------------------------------------------------
-
+```
 6. Contact information
 	Name- Ritika Giridhar
 	Email- ritikagiridhar01@gmail.com
-
+```
 --------------------------------------------------------------------------
-
+```
 7. Credits and acknowledgements
 	This project would not be possible without our mentor Dr. Chao Gao. 
-
+```
 --------------------------------------------------------------------------
