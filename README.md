@@ -34,8 +34,9 @@ List of contents:
 -------------------------------------------------------------------------
 
 3. Operating instructions
-	 In order to run this application, first type "make" and after it is
-     done compiling, type "./sound" to run executable.
+	In order to run this application, first type "make" to generate 
+	executable  and after it is done compiling, type "./sound" to 
+	run executable.
 
 --------------------------------------------------------------------------
 
