@@ -22,8 +22,8 @@ void WAVdata(WAVheader h, FILE *fp)
 {
 	short samples[SIZE];
 	int i, k;
-	int peaks = 0, flag = 0;
-	double db_val = 0.0;
+	int flag = 0, peaks = 0;
+	double h. db_val = 0.0;
 
 	for(i = 0; i < BARS; ++i)
 	{
@@ -36,8 +36,8 @@ void WAVdata(WAVheader h, FILE *fp)
 		
 		double dB = 20*log10(sqrt(sum/SIZE));		//calculates decibel value
 		
-		if(dB > db_val)
-			db_val = dB;
+		if(dB > h.db_val)
+			h.db_val = dB;
 
 
 #ifdef SDEBUG
