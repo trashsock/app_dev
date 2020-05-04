@@ -1,6 +1,6 @@
 #app_dev for I-IT-1N1
 ------------------------------------------------------------------------
----------------------APPLICATION DEVELOPMENT 2020-----------------------
+					APPLICATION DEVELOPMENT 2020
 ------------------------------------------------------------------------
 ```
 This project is made for the course "Application Development 2020" for us to
