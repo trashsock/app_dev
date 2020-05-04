@@ -1,6 +1,5 @@
 <?php
 
-//$data = $_POST['data'];
 $peaks = $_POST['peaks'];
 $db_val = $_POST['db_val'];
 $today = date("Y-m-d H:i:s");
