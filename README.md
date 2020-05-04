@@ -30,6 +30,9 @@ List of contents:
 	All the files required to run this application are already present
 	but if you want to change the sound file then you would have to 
 	download your own .wav file and then name it "test.wav".
+	
+	NOTE- No need to download testscreen.c, testcurl.c and 
+	project.log as they are just test files.
 ```
 
 ```
