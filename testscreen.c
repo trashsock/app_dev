@@ -33,6 +33,12 @@ int main()
 	clrscr();
 	printf("Colour is set back to default\n");
 	getchar();
+	
+	FILE *fp;
+	fp = fopen("test.wav", "r");
+	WAVheader h = readwavhdr(fp);
+	fclose(fp);
+	displayWAVhdr(h);
 /*
 	clrscr();
 	set_fg_colour(CYAN);
