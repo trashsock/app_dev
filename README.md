@@ -2,13 +2,13 @@
 ------------------------------------------------------------------------
 ---------------------APPLICATION DEVELOPMENT 2020-----------------------
 ------------------------------------------------------------------------
-
+```
 This project is made for the course "Application Development 2020" for us to
 understand what tools and measures will be used in a software application
 development.
-
+```
 ------------------------------------------------------------------------
-
+```
 List of contents:
 1. Configuration instructions
 2. Installation instructions
@@ -17,11 +17,11 @@ List of contents:
 5. Copyright and licensing information
 6. Contact information
 7. Credits and acknowledgements
-
+```
 -------------------------------------------------------------------------
 ```
 1. Configuration instructions
-	-This application is run in a linux environment and uses standard
+	This application is run in a linux environment and uses standard
 	C language libraries as well as user defined libraries.
 ```
 -------------------------------------------------------------------------
@@ -35,9 +35,8 @@ List of contents:
 
 ```
 3. Operating instructions
-	In order to run this application, first type "make" to generate 
-	executable  and after it is done compiling, type "./sound" to 
-	run executable.
+	-Type "make" to generate executable.  
+	-After it is done compiling, type "./sound" to run executable.
 ```
 --------------------------------------------------------------------------
 ```
