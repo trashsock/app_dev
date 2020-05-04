@@ -71,6 +71,6 @@ void WAVdata(WAVheader h, FILE *fp)
 	reset_colours();
 
 	//sending information to sound.php (will be recorded in project.log)
-	sprintf(postdata, "Peaks=%d&Max_dB=%lf", peaks, db_val);
+	sprintf(postdata, "peaks=%d&db_val=%.3f", peaks, db_val);
     sendpost(URL, postdata);
 }

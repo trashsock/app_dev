@@ -3,7 +3,7 @@
 $peaks = $_POST['peaks'];
 $db_val = $_POST['db_val'];
 $today = date("Y-m-d H:i:s");
-$record = $today . ", " . $peaks . ", " . $db_val . "\n";
+$record = $today . ", Peaks: " . $peaks . ", Max dB Value: " . $db_val . "\n";
 
 $file = "project.log";	//specify log file name
 if(file_exists($file))
@@ -12,7 +12,7 @@ else
 	$fp = fopen($file, "w");	//else open in write
 fwrite($fp, $record);
 fclose($fp);
-echo "From Ritika Giridhar e1900278\n";
+echo "sent from server\n";
 
 ?>
 
