@@ -1,7 +1,7 @@
-###app_dev for I-IT-1N1
-------------------------------------------------------------------------
+### app_dev for I-IT-1N1
+
 ##					APPLICATION DEVELOPMENT 2020
-------------------------------------------------------------------------
+
 ```
 This project is made for the course "Application Development 2020" for us to
 understand what tools and measures will be used in a software application
