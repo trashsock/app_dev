@@ -2,6 +2,7 @@
 #include "sound.h"
 #include <math.h>
 #include "screen.h"
+#include "comm.h"
 
 WAVheader readwavhdr(FILE *fp)
 {
@@ -23,7 +24,8 @@ void WAVdata(WAVheader h, FILE *fp)
 	short samples[SIZE];
 	int i, k;
 	int flag = 0, peaks = 0;
-	double h. db_val = 0.0;
+	double db_val = 0.0;
+	char postdata[100];
 
 	for(i = 0; i < BARS; ++i)
 	{
@@ -36,8 +38,8 @@ void WAVdata(WAVheader h, FILE *fp)
 		
 		double dB = 20*log10(sqrt(sum/SIZE));		//calculates decibel value
 		
-		if(dB > h.db_val)
-			h.db_val = dB;
+		if(dB > db_val)
+			db_val = dB;
 
 
 #ifdef SDEBUG
@@ -67,4 +69,8 @@ void WAVdata(WAVheader h, FILE *fp)
 	gotoXY(1, 125);
 	printf("Maximum decibel value: %.3f\n", db_val); 	//max 3 decimal places
 	reset_colours();
+
+	//sending information to sound.php (will be recorded in project.log)
+	sprintf(postdata, "Peaks=%d&Max_dB=%lf", peaks, db_val);
+    sendpost(URL, postdata);
 }
